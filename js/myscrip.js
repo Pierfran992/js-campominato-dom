@@ -19,7 +19,7 @@ const play = document.querySelector("div.ms_play");
 play.addEventListener("click", 
     function() {
 
-        // richiamo il div con classe .ms_score così da farlo apparire con display block quando clicco sul tasto play
+        // dò al div con classe .ms_score anche la classe ms_dblock così da farlo apparire quando clicco play
         let msScore = document.querySelector("div.ms_score");
         msScore.classList.add("ms_dblock");
 
@@ -41,15 +41,19 @@ play.addEventListener("click",
             // aggiungo all'elemento creato un evento al click dello stesso
             newElement.addEventListener("click",
                 function() {
-                    // this.classList.add("ms_bomb");
-                    // console.log(i);
-                    if (bombArray.includes(i)) {
+                    // creo la costante del punteggio
+                    let point = 10;
+
+                    // creo le condizioni del gioco al click sulle caselle
+                    if (bombArray.includes(i)) { // condizioni quando si clicca su una casella che contiene la bomba
                         this.classList.add("ms_bomb");
                         const gameOver = alert("GAME OVER");
-                    } else {
+
+                    } else { //condizioni quando si clicca su una casella point
                         this.classList.add("ms_point");
-                        // let addPoint = 10;
-                        // msScore.append += addPoint;
+                        point++;
+                        let newPoint = point;
+                        msScore.innerHTML = newPoint;
                     }
                     
                 }, {once: true}
