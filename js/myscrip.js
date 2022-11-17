@@ -23,7 +23,7 @@ play.addEventListener("click",
         let msScore = document.querySelector("div.ms_score");
         msScore.classList.add("ms_dblock");
 
-        // svuoto il container
+        // svuoto il container delle celle
         container.innerHTML = '';
         console.clear();
 
@@ -45,8 +45,11 @@ play.addEventListener("click",
                     // console.log(i);
                     if (bombArray.includes(i)) {
                         this.classList.add("ms_bomb");
+                        const gameOver = alert("GAME OVER");
                     } else {
                         this.classList.add("ms_point");
+                        // let addPoint = 10;
+                        // msScore.append += addPoint;
                     }
                     
                 }, {once: true}
