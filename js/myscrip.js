@@ -37,8 +37,14 @@ play.addEventListener("click",
             // aggiungo all'elemento creato un evento al click dello stesso
             newElement.addEventListener("click",
                 function() {
-                    this.classList.add("ms_click");
-                    console.log(i); 
+                    // this.classList.add("ms_bomb");
+                    // console.log(i);
+                    if (bombArray.includes(i)) {
+                        this.classList.add("ms_bomb");
+                    } else {
+                        this.classList.add("ms_point");
+                    }
+                    
                 }, {once: true}
             );
 
