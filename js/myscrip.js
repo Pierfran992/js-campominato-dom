@@ -61,7 +61,7 @@ play.addEventListener("click",
                         let newPoint = point;
 
                         //imposto la codizione di vittoria
-                        if (point === maxPoint){
+                        if (newPoint === maxPoint){
                             const youWin = alert("YOU WIN");
                         } else {
                             msCurrentScore.innerHTML = newPoint;
