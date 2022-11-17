@@ -10,8 +10,9 @@ Altrimenti la cella cliccata si colora di azzurro e l’utente può continuare a
 La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.*/
 
-// creo la costante del punteggio
+// creo la costante del punteggio e del punteggio massimo raggiungibile per la vittoria
 let point = 0;
+let maxPoint = 84;
 
 // richiamo il container in cui inserire le caselle generate
 const container = document.querySelector("div.container");
@@ -54,13 +55,20 @@ play.addEventListener("click",
                         this.classList.add("ms_bomb");
                         const gameOver = alert("GAME OVER");
 
-                    } else { //condizioni quando si clicca su una casella point
+                    }else { //condizioni quando si clicca su una casella point
                         this.classList.add("ms_point");
                         point++;
                         let newPoint = point;
-                        msCurrentScore.innerHTML = newPoint;
+
+                        //imposto la codizione di vittoria
+                        if (point === maxPoint){
+                            const youWin = alert("YOU WIN");
+                        } else {
+                            msCurrentScore.innerHTML = newPoint;
+                        } 
+                        
                     }
-                    
+
                 }, {once: true}
             );
 
