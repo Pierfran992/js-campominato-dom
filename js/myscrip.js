@@ -23,6 +23,10 @@ play.addEventListener("click",
         container.innerHTML = '';
         console.clear();
 
+        // genero l'array delle bombe
+        const bombArray = genArrNumUnicRandomMinMax(16, 1, 100);
+        console.log(bombArray);
+
         // creo il ciclo for per creare le 100 caselle nel DOM
         for(let i = 1; i <= 100; i++) {
 
@@ -57,3 +61,27 @@ function createElement (typeElement, idClassElement) {
     // ritorno l'elemento
     return element;
 } 
+
+// creo la funzione per generare numeri random
+function randomNumberMinMax (min, max) {
+    return ( Math.floor(Math.random() * ((max + 1) - min) + min));
+}
+
+// creo la funzione per creare un arrey di numeri random unici 
+function genArrNumUnicRandomMinMax (maxElement, minNum, maxNum) {
+    
+    // creo l'array
+    const arrNumUnicRandom = [];
+
+    // genero i numeri da inserire nell'array
+    while (arrNumUnicRandom.length < maxElement) {
+        let newNumber = randomNumberMinMax (minNum, maxNum);
+        if (!arrNumUnicRandom.includes(newNumber)){
+            arrNumUnicRandom.push(newNumber);
+        }
+    }
+
+    // ritorno l'array generato
+    return arrNumUnicRandom;
+}
+
