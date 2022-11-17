@@ -19,6 +19,10 @@ const play = document.querySelector("div.ms_play");
 play.addEventListener("click", 
     function() {
 
+        // richiamo il div con classe .ms_score così da farlo apparire con display block quando clicco sul tasto play
+        let msScore = document.querySelector("div.ms_score");
+        msScore.classList.add("ms_dblock");
+
         // svuoto il container
         container.innerHTML = '';
         console.clear();
