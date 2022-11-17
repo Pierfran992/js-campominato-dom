@@ -89,9 +89,15 @@ header img {
     cursor: pointer;
 }
 
-.ms_box.ms_click {
+.ms_box.ms_point {
     background-color: #150050;
     color: #fff;
+}
+
+.ms_box.ms_bomb {
+    background-color: #000000;
+    color: #fff;
+    border: solid 2px #fff;
 }
 
 /* footer rules */
