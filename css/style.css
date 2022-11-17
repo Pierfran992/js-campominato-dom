@@ -1,0 +1,101 @@
+/* general rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header, footer {
+    background-color: #000000;
+    color: #610094;
+    width: 100%;
+    height: 100px;
+}
+
+main {
+    background-color: #150050;
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    padding: 50px 0;
+}
+
+/* header rules */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ms_bar_title{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ms_slot_img_logo {
+    width: 80px;
+    height: auto;
+}
+
+header img {
+    width: 100%;
+    border: solid 2px #610094;
+    border-radius: 10px;
+}
+
+.ms_play {
+    background-color: #150050;
+    color: #610094;
+    padding: 10px 20px;
+    border: solid 2px #610094;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* main rules */
+.container {
+    background-color: #610094;
+    color: #fff;
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border: solid 2px #3F0071;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ms_instructions {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ms_instructions > p {
+    margin: 20px 0;
+}
+
+.ms_box {
+    color: #150050;
+    background-color: #fff;
+    width: 10%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: solid 2px #000000;
+    cursor: pointer;
+}
+
+.ms_box.ms_click {
+    background-color: #150050;
+    color: #fff;
+}
+
+/* footer rules */
+footer {
+    text-align: center;
+    line-height: 100px;
+}
